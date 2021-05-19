@@ -13,8 +13,7 @@ pipeline {
             //agent {label 'node2'}
             steps {
                 sh '''
-                    ./pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean --file ./pipeline6/java-app/pom.xml
-                    ./pipeline6/jenkins/build/build.sh
+                    ./pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean package
                 '''
             }
 
